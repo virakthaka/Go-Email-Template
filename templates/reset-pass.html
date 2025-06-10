@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reset Password</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    }
+    .logo img {
+      height: 100px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    .button {
+      background-color: #176bcb;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #555;
+    }
+    .footer a {
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
+    <h1>Reset Password</h1>
+    <p>Hi {{ .Username }},</p>
+    <p>{{ .Body }} <br><br><a href="{{ .Link }}">[{{ .Link }}]</a></p>
+    <a href="{{ .Link }}" class="button">Confirm Now</a>
+    <div class="footer">
+      Didn't submit request? <a href="#">Click here.</a>
+    </div>
+  </div>
+</body>
+</html>
